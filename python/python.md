@@ -9,7 +9,7 @@ b = [2, 3, 4]
 aset = set(a)
 bset = set(b)
 print(aset & bset) #교집합 2, 3
-print(aset | bset) #합집합 1, 2, 3 ,4
+print(aset | bset) #합집합 1, 2, 3, 4
 ```
 ## 뒤집기
 ```py
