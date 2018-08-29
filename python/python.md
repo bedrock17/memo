@@ -37,3 +37,10 @@ if 'key1' in dict.keys():
 else:
     print("없다")
 ```
+
+## python 재귀 제한 조정
+```py
+import sys
+limit = 2000 #2000까지
+sys.setrecursionlimit(limit)
+```
