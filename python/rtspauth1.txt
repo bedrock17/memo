@@ -1,0 +1,44 @@
+OPTIONS rtsp://192.168.0.119/stream0/Channel=0;Profile=0 RTSP/1.0
+CSeq: 2
+User-Agent: LIVE555 Streaming Media v2013.02.11
+
+RTSP/1.0 200 OK
+CSeq: 2
+Public: DESCRIBE,SETUP,PLAY,TEARDOWN,GET_PARAMETER,SET_PARAMETER
+User-Agent: UMSC-009
+
+DESCRIBE rtsp://192.168.0.119/stream0/Channel=0;Profile=0 RTSP/1.0
+CSeq: 3
+User-Agent: LIVE555 Streaming Media v2013.02.11
+Accept: application/sdp
+
+RTSP/1.0 401 Unauthorized
+CSeq: 3
+WWW-Authenticate: Digest realm="nadatel@nadatel.com", nonce="00000015423342450000000000366557", algorithm=MD5, qop="auth"
+
+DESCRIBE rtsp://192.168.0.119/stream0/Channel=0;Profile=0 RTSP/1.0
+CSeq: 4
+Authorization: Digest username="admin", realm="nadatel@nadatel.com", nonce="00000015423342450000000000366557", 
+            uri="rtsp://192.168.0.119/stream0/Channel=0;Profile=0", response="a18b778876fcf6cd7e963f92e04c82eb"
+
+User-Agent: LIVE555 Streaming Media v2013.02.11
+Accept: application/sdp
+
+RTSP/1.0 200 OK
+CSeq: 4
+x-Accept-Dynamic-Rate: 1
+Content-type: application/sdp
+Content-Base: rtsp://192.168.0.119:554/
+User-Agent: UMSC-009
+Content-Length: 219
+
+v=0
+o=- 0 0 IN IP4 192.168.0.119
+s=Nadatel Onvif Server
+i=audio video live media server
+a=type:broadcast
+c=IN IP4 0.0.0.0
+t=0 0
+m=video 0 RTP/AVP 96 H264/90000
+a=control:rtsp://192.168.0.119/video
+a=rtpmap:96 H264/90000

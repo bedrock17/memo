@@ -1,0 +1,7 @@
+XûY0pÂ
+ àEà4_@À¨À¨yµ*× .ÝòÔ`P§DESCRIBE rtsp://192.168.0.121:554/Streaming/Channels/101?transportmode=unicast&profile=Profile_1 RTSP/1.0
+CSeq: 4
+Authorization: Digest username="admin", realm="IP Camera(C4043)", nonce="3d9e6c21aa43f72ac25a97963b40f343", uri="rtsp://192.168.0.121:554/Streaming/Channels/101?transportmode=unicast&profile=Profile_1", response="f34a7a7100de59bab6f733acc7f95341"
+User-Agent: LIVE555 Streaming Media v2013.02.11
+Accept: application/sdp
+
