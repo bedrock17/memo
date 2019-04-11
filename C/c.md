@@ -4,7 +4,7 @@
 
 ### inet_addr 함수
 
-문자열 => struct sockaddr_in
+문자열 => struct in_addr
 
 ```c
 #include <sys/socket.h>
