@@ -13,9 +13,9 @@ print(startTime, endTime, datetime.now())
 
 while True:
   now = datetime.now()
-  leftTime = endTime - now
+  timeRemaining = endTime - now
 
   nowTimeStamp = (now - startTime).total_seconds()
 
-  print(leftTime, "(%d weeks)"%(leftTime.total_seconds() / (60 * 60 * 24 * 7)) , "%f%%"%(nowTimeStamp / totTimeStamp * 100))
+  print(timeRemaining, "(%d weeks)"%(timeRemaining.total_seconds() / (60 * 60 * 24 * 7)) , "%0.12lf%%"%(nowTimeStamp / totTimeStamp * 100))
   time.sleep(0.3)
