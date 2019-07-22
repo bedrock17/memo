@@ -1,22 +1,32 @@
-samba 설정
---
-# 설치
+
+# samba 설정
+
+## 설치
 ```bash
-sudo apt install samba
+apt install samba
 ```
 
-# 설정
+## 계정 설정
 ```bash
-sudo vi /etc/samba/smb.conf
+smbpasswd -a [계정명]
 ```
 
-# 주요 설정 
-```ini
-security = [share|user]
-
-[share]
-  comment = Share Directories
-  path = #[설정할 경로]
-  read only = no
-  guest = ok
+## 설정
+```bash
+vi /etc/samba/smb.conf
 ```
+
+## 설정파일 계정 편집 예제
+```conf
+[sh]
+comment = sh
+path = /home/sh
+valid users = sh
+writeable = yes
+create mask = 644
+directory mask = 0755
+```
+
+## restart
+/etc/init.d/smbd restart
+
