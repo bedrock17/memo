@@ -21,5 +21,17 @@ if fierr != nil {
 //read
 data := make(fileInfo.Size())
 
-//
+n := file.Read(data)
+```
+
+## 파일이 있는지 확인
+```go
+if _, err := os.Stat(filePath); err == nil {
+    // path/to/whatever exists
+}
+```
+
+## 디렉토리 만들기
+```go
+os.Mkdir("dirname", 0700)
 ```
