@@ -10,7 +10,7 @@ if err != nil {
 }
 
 //닫기
-defer file.close()
+defer file.Close()
 
 fileInfo, fierr := file.Stat()
 
