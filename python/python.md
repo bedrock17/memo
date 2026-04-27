@@ -31,8 +31,8 @@ print(list(filter(lambda x: x < 2, lst))) # [1]
 ```
 ## 딕셔너리 키 확인
 in 을 사용 있다면 True
-```py
-if 'key1' in dict.keys():
+```python
+if 'key1' in my_dict:
     print("있다")
 else:
     print("없다")

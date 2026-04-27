@@ -1,13 +1,21 @@
 import hashlib
 
-m = hashlib.md5()
-m.update(b"admin:nadatel@nadatel.com:1111")
+def get_md5(data):
+    if isinstance(data, str):
+        data = data.encode('utf-8')
+    return hashlib.md5(data).hexdigest()
+
 # m.update("")
-ha1 = m.hexdigest()
-
-m.update(b"post:1111")
-ha2 = m.hexdigest()
-
 # s = str(s).replace("\\x", " ")
 
-print(ha1)
+username = "admin"
+realm = "nadatel@nadatel.com"
+password = "password1111"
+method = "POST"
+uri = "/index.html"
+
+ha1 = get_md5(f"{username}:{realm}:{password}")
+ha2 = get_md5(f"{method}:{uri}")
+
+print(f"HA1: {ha1}")
+print(f"HA2: {ha2}")
